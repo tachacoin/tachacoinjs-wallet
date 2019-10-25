@@ -11,7 +11,7 @@ then
 	set -
 fi
 
-LOCKFILE=${QTUM_DATADIR}/import-test-wallet.lock
+LOCKFILE=${TACHACOIN_DATADIR}/import-test-wallet.lock
 
 if [ ! -e $LOCKFILE ]; then
   while
@@ -20,11 +20,11 @@ if [ ! -e $LOCKFILE ]; then
 
        set -x
 
-       qcli importprivkey "cMbgxCJrTYUqgcmiC1berh5DFrtY1KeU4PXZ6NZxgenniF1mXCRk" # addr=qUbxboqjBRp96j3La8D1RYkyqx5uQbJPoW hdkeypath=m/88'/0'/1'
-       qcli importprivkey "cRcG1jizfBzHxfwu68aMjhy78CpnzD9gJYZ5ggDbzfYD3EQfGUDZ" # addr=qLn9vqbr2Gx3TsVR9QyTVB5mrMoh4x43Uf hdkeypath=m/88'/0'/2'
+       qcli importprivkey "cMbgxCJrTYUqgcmiC1berh5DFrtY1KeU4PXZ6NZxgenniF1mXCRk" # addr=TUbxboqjBRp96j3La8D1RYkyqx5uQbJPoW hdkeypath=m/88'/0'/1'
+       qcli importprivkey "cRcG1jizfBzHxfwu68aMjhy78CpnzD9gJYZ5ggDbzfYD3EQfGUDZ" # addr=TLn9vqbr2Gx3TsVR9QyTVB5mrMoh4x43Uf hdkeypath=m/88'/0'/2'
 
-       solar prefund qUbxboqjBRp96j3La8D1RYkyqx5uQbJPoW 500
-       solar prefund qLn9vqbr2Gx3TsVR9QyTVB5mrMoh4x43Uf 500
+       solar prefund TUbxboqjBRp96j3La8D1RYkyqx5uQbJPoW 500
+       solar prefund TLn9vqbr2Gx3TsVR9QyTVB5mrMoh4x43Uf 500
        touch $LOCKFILE
 
        set -

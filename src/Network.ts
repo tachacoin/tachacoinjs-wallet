@@ -30,16 +30,16 @@ export interface INetworkInfo {
 export const networksInfo: { [key: string]: INetworkInfo } = {
   [NetworkNames.MAINNET]: {
     name: NetworkNames.MAINNET,
-    messagePrefix: "\u0015Qtum Signed Message:\n",
-    bech32: "bc",
+    messagePrefix: "\u0015Tachacoin Signed Message:\n",
+    bech32: "tc",
     bip32: { public: 76067358, private: 76066276 },
-    pubKeyHash: 58,
+    pubKeyHash: 65,
     scriptHash: 50,
     wif: 128,
   },
   [NetworkNames.TESTNET]: {
     name: NetworkNames.TESTNET,
-    messagePrefix: "\u0015Qtum Signed Message:\n",
+    messagePrefix: "\u0015Tachacoin Signed Message:\n",
     bech32: "tb",
     bip32: { public: 70617039, private: 70615956 },
     pubKeyHash: 120,
@@ -48,7 +48,7 @@ export const networksInfo: { [key: string]: INetworkInfo } = {
   },
   [NetworkNames.REGTEST]: {
     name: NetworkNames.REGTEST,
-    messagePrefix: "\u0015Qtum Signed Message:\n",
+    messagePrefix: "\u0015Tachacoin Signed Message:\n",
     bech32: "tb",
     bip32: { public: 70617039, private: 70615956 },
     pubKeyHash: 120,
@@ -103,7 +103,7 @@ export class Network {
   }
 
   /**
-   * Restore 10 wallet addresses exported from QTUM's mobile clients. These
+   * Restore 10 wallet addresses exported from TACHACOIN's mobile clients. These
    * wallets are 10 sequential addresses rooted at the HD-wallet path
    * `m/88'/0'/0'` `m/88'/0'/1'` `m/88'/0'/2'`, and so on.
    *
